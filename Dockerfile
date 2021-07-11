@@ -41,6 +41,10 @@ RUN npm ci --save --only=production
 # Bundle app source
 COPY --chown=qcobjects:qcobjects . .
 
-EXPOSE 80
+ENV PORT_HTTP 80
+ENV PORT_HTTPS 443
+
+EXPOSE $PORT_HTTP
+EXPOSE $PORT_HTTPS
 
 CMD [ "npm", "run", "start" ]
