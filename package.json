@@ -5,7 +5,7 @@
   "main": "qcobjects-azure-app-service.js",
   "license": "LGPL-3.0",
   "scripts": {
-    "start": "qcobjects-server",
+    "start": "node ./qcobjects-azure-app-service.js",
     "test": "npx eslint qcobjects-azure-app-service.js && jasmine",
     "preversion": "npm cache verify && npm test",
     "sync": "git add . && git commit -am ",
